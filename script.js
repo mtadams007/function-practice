@@ -31,12 +31,14 @@ let simpleCalc = (a,b) => {
 // Door 3 will turn into a blackhole and teleport you to antarctica
 
 let magicDoor = (input) => {
-  if (input == 1){
+  if (input === 1){
     alert("Congratulations! You have won a brand new car!");
-  }else if (input == 2){
+  } else if (input === 2){
     alert("Congrats! You have won a NYCDA t-shirt!");
-  }else if (input == 3){
+  } else if (input === 3){
     alert("This door is now a black hole. Welcome to Antartica!");
+  } else {
+    alert("Wrong number. :(");
   }
 }
 
@@ -46,9 +48,9 @@ let magicDoor = (input) => {
 let greaterOfThree = (a,b,c) => {
   if (a >= b && a >= c) {
     return a;
-  }else if (b >= a && b >= c) {
+  } else if (b >= c) {
     return b;
-  }else{
+  } else {
     return c;
   }
 }
@@ -77,9 +79,15 @@ let royalizer = (gender, name) => {
   let gender2 = gender.toUpperCase();
   if (gender2 == "MALE"){
     return "His Majesty " + name;
-  }else if (gender2 == "FEMALE"){
+  } else if (gender2 == "FEMALE"){
     return "Her Majesty " + name;
-  }else{
+  } else {
     return "Their Majesty " + name;
   }
+}
+
+// stolen from danielle
+
+function royalizer(gender, name) {
+    return gender == "female" ? "Her Majesty, " + name : "His Majesty, " + name;
 }
